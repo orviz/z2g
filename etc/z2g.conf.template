@@ -1,0 +1,33 @@
+[DEFAULT]
+
+# Metric's configuration file
+metrics_file  = "/etc/z2g/metrics.conf"
+
+# Number of worker threads to deal with the connections to Zabbix API
+num_workers = 10
+
+# Seconds to sleep between iterations
+seconds_to_sleep = 30
+
+[zabbix]
+
+# URL where Zabbix can be accessed
+url = "http://example.com/zabbix"
+
+# Login name 
+username = "username"
+
+# Password
+password = "password"
+
+
+[graphite]
+
+# IP or hostname of the Graphite's carbon server
+carbon_server = '127.0.0.1'
+
+# Port where carbon server is accesible
+carbon_port = 2003
+
+# Prefix used in the metrics
+prefix = ""

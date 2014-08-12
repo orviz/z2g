@@ -1,0 +1,12 @@
+
+*.egg*
+*.log
+*.mo
+*.pyc
+*.swo
+*.swp
+*~
+.venv
+build/*
+dist/*
+etc/z2g.conf

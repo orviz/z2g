@@ -1,0 +1,28 @@
+#!/bin/bash
+
+DAEMON="/usr/bin/python"
+ARGS="/usr/local/bin/z2g.py"
+PIDFILE="/var/run/z2g.pid"
+USER="root"
+
+case "$1" in
+  start)
+    echo "Starting server"
+    #mkdir -p "$WORK_DIR"
+    /sbin/start-stop-daemon --start --pidfile $PIDFILE \
+        --user $USER --group $USER \
+        -b --make-pidfile \
+        --chuid $USER \
+        --exec $DAEMON $ARGS
+    ;;
+  stop)
+    echo "Stopping server"
+    /sbin/start-stop-daemon --stop --pidfile $PIDFILE --verbose
+    ;;
+  *)
+    echo "Usage: /etc/init.d/`basename $0` {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0

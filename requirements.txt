@@ -1,0 +1,5 @@
+concurrent.futures
+oslo.config
+pyzabbix
+requests
+yaml
