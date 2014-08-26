@@ -1,6 +1,7 @@
 import logging
 import requests
 
+from oslo.config import cfg
 from pyzabbix import ZabbixAPI
 
 logger = logging.getLogger(__name__)

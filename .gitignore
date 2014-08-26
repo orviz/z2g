@@ -10,3 +10,5 @@
 build/*
 dist/*
 etc/z2g.conf
+etc/z2g/
+venv/

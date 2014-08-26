@@ -1,5 +1,6 @@
-concurrent.futures
+futures
 oslo.config
+pyyaml
 pyzabbix
 requests
-yaml
+statsd
